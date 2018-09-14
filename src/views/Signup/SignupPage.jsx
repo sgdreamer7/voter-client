@@ -39,12 +39,8 @@ function SignupPage(props) {
         <GridItem xs={12} sm={12} md={8}>
           <Card>
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>
-                Register with Home Expense App
-              </h4>
-              <p className={classes.cardCategoryWhite}>
-                Please, enter your email and password
-              </p>
+              <h4 className={classes.cardTitleWhite}>Register with Voter App</h4>
+              <p className={classes.cardCategoryWhite}>Please, enter your email and password</p>
             </CardHeader>
             <CardBody>
               <Grid container>
