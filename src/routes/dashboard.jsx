@@ -11,7 +11,7 @@ import SignupPage from "views/Signup/SignupPage.jsx";
 import ReportsPage from "views/Reports/ReportsPage.jsx";
 import ConfigPage from "views/Config/ConfigPage.jsx";
 
-export const isSignedInUser = true;
+export const isSignedInUser = false;
 
 const dashboardRoutes = [
   (isSignedInUser && {
