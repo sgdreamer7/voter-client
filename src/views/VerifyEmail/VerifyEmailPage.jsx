@@ -40,11 +40,9 @@ function VerifyEmailPage(props) {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>
-                Email verification to finish registration with Home Expense App
+                Email verification to finish registration with Voter App
               </h4>
-              <p className={classes.cardCategoryWhite}>
-                Please, confirm email address
-              </p>
+              <p className={classes.cardCategoryWhite}>Please, confirm email address</p>
             </CardHeader>
             <CardBody>
               <Grid container>

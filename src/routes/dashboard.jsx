@@ -67,6 +67,6 @@ const dashboardRoutes = [
     to: isSignedInUser ? "/dashboard" : "/signin",
     navbarName: "Redirect"
   }
-].filter(route => !!route);
+].filter((route) => !!route);
 
 export default dashboardRoutes;
