@@ -7,7 +7,7 @@ import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import SigninPage from "views/Signin/SigninPage.jsx";
 import VerifyEmailPage from "views/VerifyEmail/VerifyEmailPage.jsx";
 import SignupPage from "views/Signup/SignupPage.jsx";
-import ReportsPage from "views/Reports/ReportsPage.jsx";
+import CreatePollPage from "views/CreatePoll/CreatePollPage";
 
 export const isSignedInUser = true;
 
@@ -49,7 +49,7 @@ const dashboardRoutes = [
     sidebarName: "Poll",
     navbarName: "Poll",
     icon: Receipt,
-    component: ReportsPage
+    component: CreatePollPage
   }) ||
     null,
   (isSignedInUser && {
@@ -57,7 +57,7 @@ const dashboardRoutes = [
     sidebarName: "Create",
     navbarName: "Create",
     icon: Receipt,
-    component: ReportsPage
+    component: CreatePollPage
   }) ||
     null,
   {

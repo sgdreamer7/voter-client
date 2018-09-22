@@ -15,6 +15,7 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
 import Table from "components/Table/Table.jsx";
+import CustomInput from "components/CustomInput/CustomInput.jsx";
 
 const styles = {
   cardCategoryWhite: {
@@ -35,7 +36,7 @@ const styles = {
   }
 };
 
-function UserProfile(props) {
+function CreatePollPage(props) {
   const { classes } = props;
   return (
     <div>
@@ -43,35 +44,45 @@ function UserProfile(props) {
         <GridItem xs={12} sm={12} md={10}>
           <Card>
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Edit Categories</h4>
+              <h4 className={classes.cardTitleWhite}>Create new poll</h4>
               <p className={classes.cardCategoryWhite}>
-                Please, config your categories
+                Please, add your question and answers for polling
               </p>
             </CardHeader>
             <CardBody>
               <Grid container>
-                <Table
-                  tableHeaderColor="primary"
-                  tableData={Array.from(Array(20).keys()).map(index => [
-                    <FormLabel>{`Category ${index + 1}`}</FormLabel>,
-                    <div>
-                      <Button color="info">
-                        <ArrowUpward />
-                      </Button>
-                      <Button color="info">
-                        <ArrowDownward />
-                      </Button>
-                      <Button color="warning">
-                        <Cancel />
-                      </Button>
-                      <Button color="info">*</Button>
-                    </div>
-                  ])}
-                />
+                <GridItem xs={12} sm={12} md={12}>
+                  <CustomInput
+                    labelText="Question"
+                    id="question"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                  />
+                </GridItem>
+                <GridItem xs={12} sm={12} md={12}>
+                  <Table
+                    tableHeaderColor="primary"
+                    tableData={Array.from(Array(5).keys()).map((index) => [
+                      <FormLabel>{`This is the Answer #${index + 1} for the Question`}</FormLabel>,
+                      <div>
+                        <Button color="info">
+                          <ArrowUpward />
+                        </Button>
+                        <Button color="info">
+                          <ArrowDownward />
+                        </Button>
+                        <Button color="warning">
+                          <Cancel />
+                        </Button>
+                      </div>
+                    ])}
+                  />
+                </GridItem>
               </Grid>
             </CardBody>
             <CardFooter>
-              <Button color="primary">Add category</Button>
+              <Button color="primary">Add answer</Button>
             </CardFooter>
           </Card>
         </GridItem>
@@ -80,4 +91,4 @@ function UserProfile(props) {
   );
 }
 
-export default withStyles(styles)(UserProfile);
+export default withStyles(styles)(CreatePollPage);
