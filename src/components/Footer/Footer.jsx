@@ -24,13 +24,13 @@ function Footer({ ...props }) {
                   </a>
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
-                  <a href="/reports" className={classes.block}>
-                    Reports
+                  <a href="/poll" className={classes.block}>
+                    Poll
                   </a>
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
-                  <a href="/config" className={classes.block}>
-                    Config
+                  <a href="/create" className={classes.block}>
+                    Create
                   </a>
                 </ListItem>
               </React.Fragment>
@@ -56,7 +56,8 @@ function Footer({ ...props }) {
             &copy; {1900 + new Date().getYear()}{" "}
             <a href="https://github.com/sgdreamer7" className={classes.a}>
               Vladimir Scherbina
-            </a>, made with love for a better web
+            </a>
+            , made with love for a better web
           </span>
         </p>
       </div>
