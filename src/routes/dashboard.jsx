@@ -1,7 +1,6 @@
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
-import Settings from "@material-ui/icons/Settings";
 import Receipt from "@material-ui/icons/Receipt";
 // core components/views
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
@@ -9,9 +8,8 @@ import SigninPage from "views/Signin/SigninPage.jsx";
 import VerifyEmailPage from "views/VerifyEmail/VerifyEmailPage.jsx";
 import SignupPage from "views/Signup/SignupPage.jsx";
 import ReportsPage from "views/Reports/ReportsPage.jsx";
-import ConfigPage from "views/Config/ConfigPage.jsx";
 
-export const isSignedInUser = false;
+export const isSignedInUser = true;
 
 const dashboardRoutes = [
   (isSignedInUser && {
@@ -47,20 +45,21 @@ const dashboardRoutes = [
   }) ||
     null,
   (isSignedInUser && {
-    path: "/reports",
-    sidebarName: "Reports",
-    navbarName: "Reports",
+    path: "/poll",
+    sidebarName: "Poll",
+    navbarName: "Poll",
     icon: Receipt,
     component: ReportsPage
   }) ||
     null,
-  isSignedInUser && {
-    path: "/config",
-    sidebarName: "Config",
-    navbarName: "Config",
-    icon: Settings,
-    component: ConfigPage
-  },
+  (isSignedInUser && {
+    path: "/create",
+    sidebarName: "Create",
+    navbarName: "Create",
+    icon: Receipt,
+    component: ReportsPage
+  }) ||
+    null,
   {
     redirect: true,
     path: "/",
