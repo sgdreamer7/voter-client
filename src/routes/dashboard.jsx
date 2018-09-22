@@ -8,6 +8,7 @@ import SigninPage from "views/Signin/SigninPage.jsx";
 import VerifyEmailPage from "views/VerifyEmail/VerifyEmailPage.jsx";
 import SignupPage from "views/Signup/SignupPage.jsx";
 import CreatePollPage from "views/CreatePoll/CreatePollPage";
+import PollPage from "views/Poll/PollPage";
 
 export const isSignedInUser = true;
 
@@ -49,7 +50,7 @@ const dashboardRoutes = [
     sidebarName: "Poll",
     navbarName: "Poll",
     icon: Receipt,
-    component: CreatePollPage
+    component: PollPage
   }) ||
     null,
   (isSignedInUser && {
